@@ -1,32 +1,46 @@
 <template>
   <section>
-    <h2 class="text-lg sm:text-xl font-semibold tracking-tight text-white mb-4">
+    <h2 class="text-lg sm:text-xl font-semibold tracking-tight mb-4">
       About
     </h2>
 
     <div
-      class="rounded-3xl border border-white/10 bg-surface/80 px-5 py-5 sm:px-6 sm:py-6 shadow-soft backdrop-blur"
+      class="rounded-3xl border px-5 py-5 sm:px-6 sm:py-6 shadow-soft backdrop-blur transition-colors duration-500
+             bg-white/80 border-black/10 text-slate-800
+             dark:bg-surface/80 dark:border-white/10 dark:text-slate-100"
     >
-      <p class="text-sm text-slate-300 leading-relaxed mb-4">
-        Saya adalah seorang developer yang tertarik pada frontend development, UI/UX,
-        dan pengalaman pengguna yang smooth. Saya senang mengubah desain menjadi
-        website yang hidup dan interaktif.
+      <p class="text-sm leading-relaxed mb-4">
+        Saya seorang pemula dalam dunia web development yang tertarik pada Frontend, Backend,
+        dan UI/UX Design. Saat ini saya sedang belajar membuat website yang modern, responsif,
+        dan nyaman digunakan.
       </p>
 
-      <p class="text-sm text-slate-300 leading-relaxed mb-4">
-        Fokus saya saat ini adalah membangun portofolio, meningkatkan skill
-        JavaScript &amp; Vue.js, dan berkontribusi pada project nyata.
+      <p class="text-sm leading-relaxed mb-4">
+        Saya terus mengembangkan kemampuan HTML, CSS, JavaScript, Vue.js, dan Tailwind CSS,
+        serta mencoba menerapkan dasar-dasar UI/UX dalam setiap project yang saya kerjakan.
       </p>
 
-      <div class="flex flex-wrap gap-2 text-[11px] text-slate-300">
-        <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1">
-          Frontend Development
+      <div class="flex flex-wrap gap-2 text-[11px]">
+        <span
+          class="rounded-full border px-3 py-1
+                 bg-slate-100 border-black/10 text-slate-800
+                 dark:bg-white/5 dark:border-white/10 dark:text-slate-200"
+        >
+          Frontend Beginner
         </span>
-        <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1">
-          UI Design
+        <span
+          class="rounded-full border px-3 py-1
+                 bg-slate-100 border-black/10 text-slate-800
+                 dark:bg-white/5 dark:border-white/10 dark:text-slate-200"
+        >
+          Backend Beginner
         </span>
-        <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1">
-          Problem Solving
+        <span
+          class="rounded-full border px-3 py-1
+                 bg-slate-100 border-black/10 text-slate-800
+                 dark:bg-white/5 dark:border-white/10 dark:text-slate-200"
+        >
+          UI/UX Enthusiast
         </span>
       </div>
     </div>

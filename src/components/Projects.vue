@@ -1,18 +1,10 @@
 <script setup>
 const projects = [
   {
-    title: 'Landing Page Sneakers',
+    title: 'Sneakers Store Landing Page',
     description:
-      'Halaman produk sepatu dengan desain modern, animasi halus, dan layout responsif.',
+      'Landing page bertema toko sneakers dengan desain modern dan layout responsif. Fokus pada tampilan produk dan experience pengguna.',
     stack: ['Vue.js', 'Tailwind CSS'],
-    linkDemo: '#',
-    linkCode: '#',
-  },
-  {
-    title: 'Dashboard Penjualan',
-    description:
-      'Dashboard sederhana untuk menampilkan data penjualan dengan chart interaktif.',
-    stack: ['Vue.js', 'Chart.js'],
     linkDemo: '#',
     linkCode: '#',
   },
@@ -21,7 +13,7 @@ const projects = [
 
 <template>
   <section>
-    <h2 class="text-lg sm:text-xl font-semibold tracking-tight text-white mb-4">
+    <h2 class="text-lg sm:text-xl font-semibold tracking-tight mb-4">
       Projects
     </h2>
 
@@ -29,38 +21,30 @@ const projects = [
       <article
         v-for="project in projects"
         :key="project.title"
-        class="group rounded-3xl border border-white/10 bg-surface/80 px-5 py-5 sm:px-6 sm:py-6 shadow-soft backdrop-blur transition hover:border-accent/60 hover:-translate-y-0.5"
+        class="group rounded-3xl border px-5 py-5 sm:px-6 sm:py-6 shadow-soft backdrop-blur transition-all duration-300
+               bg-white/80 border-black/10 text-slate-800
+               hover:-translate-y-0.5 hover:shadow-lg
+               dark:bg-surface/80 dark:border-white/10 dark:text-slate-100 dark:hover:border-accent/60"
       >
         <div class="flex items-start justify-between gap-3 mb-2">
-          <h3 class="text-sm sm:text-base font-semibold text-slate-50">
+          <h3 class="text-sm sm:text-base font-semibold">
             {{ project.title }}
           </h3>
           <span
-            class="text-[10px] rounded-full border border-white/10 bg-white/5 px-2 py-1 text-slate-300"
+            class="text-[10px] rounded-full border px-2 py-1
+                   bg-slate-100 border-black/10 text-slate-700
+                   dark:bg-white/5 dark:border-white/10 dark:text-slate-200"
           >
             {{ project.stack.join(' • ') }}
           </span>
         </div>
-        <p class="text-xs sm:text-sm text-slate-300 mb-3">
+        <p class="text-xs sm:text-sm mb-3">
           {{ project.description }}
         </p>
         <div class="flex flex-wrap gap-3 text-[11px]">
-          <a
-            v-if="project.linkDemo !== '#'"
-            :href="project.linkDemo"
-            target="_blank"
-            class="text-slate-200 underline-offset-4 hover:underline"
-          >
-            Live Demo
-          </a>
-          <a
-            v-if="project.linkCode !== '#'"
-            :href="project.linkCode"
-            target="_blank"
-            class="text-slate-400 underline-offset-4 hover:underline"
-          >
-            View Code
-          </a>
+          <span class="text-slate-600 dark:text-slate-300">
+            (Link demo & kode bisa ditambahkan nanti)
+          </span>
         </div>
       </article>
     </div>

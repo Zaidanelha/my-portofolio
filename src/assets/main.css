@@ -2,10 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Default: light mode */
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 body {
-  @apply bg-background text-slate-100 font-sans antialiased;
+  @apply bg-slate-50 text-slate-900 font-sans antialiased;
+}
+
+/* Saat body punya class "dark" */
+body.dark {
+  color-scheme: dark;
+  @apply bg-background text-slate-100;
 }

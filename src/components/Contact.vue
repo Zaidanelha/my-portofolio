@@ -1,41 +1,52 @@
 <template>
   <section>
-    <h2 class="text-lg sm:text-xl font-semibold tracking-tight text-white mb-4">
+    <h2 class="text-lg sm:text-xl font-semibold tracking-tight mb-4">
       Contact
     </h2>
 
     <div class="grid gap-5 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]">
       <!-- Form -->
       <div
-        class="rounded-3xl border border-white/10 bg-surface/80 px-5 py-5 sm:px-6 sm:py-6 shadow-soft backdrop-blur"
+        class="rounded-3xl border px-5 py-5 sm:px-6 sm:py-6 shadow-soft backdrop-blur transition-colors duration-500
+               bg-white/80 border-black/10 text-slate-800
+               dark:bg-surface/80 dark:border-white/10 dark:text-slate-100"
       >
-        <p class="text-sm text-slate-300 mb-4">
-          Tertarik bekerja sama, atau ingin sekadar say hi? Silakan kirim pesan
-          melalui email atau salah satu sosial media di samping.
+        <p class="text-sm mb-4">
+          Saya masih dalam proses belajar, tapi sangat terbuka untuk saran, masukan, atau
+          kesempatan kolaborasi. Silakan tinggalkan pesan melalui form ini.
         </p>
 
         <form class="space-y-3">
           <div>
-            <label class="block text-xs text-slate-400 mb-1">Nama</label>
+            <label class="block text-xs mb-1 text-slate-600 dark:text-slate-400">Nama</label>
             <input
               type="text"
-              class="w-full rounded-xl border border-white/10 bg-background/70 px-3 py-2 text-xs text-slate-100 outline-none focus:border-accent/60"
+              class="w-full rounded-xl border px-3 py-2 text-xs outline-none transition-colors
+                     border-black/10 bg-slate-50 text-slate-900
+                     focus:border-accent/60
+                     dark:border-white/10 dark:bg-background/70 dark:text-slate-100"
               placeholder="Masukkan nama kamu"
             />
           </div>
           <div>
-            <label class="block text-xs text-slate-400 mb-1">Email</label>
+            <label class="block text-xs mb-1 text-slate-600 dark:text-slate-400">Email</label>
             <input
               type="email"
-              class="w-full rounded-xl border border-white/10 bg-background/70 px-3 py-2 text-xs text-slate-100 outline-none focus:border-accent/60"
+              class="w-full rounded-xl border px-3 py-2 text-xs outline-none transition-colors
+                     border-black/10 bg-slate-50 text-slate-900
+                     focus:border-accent/60
+                     dark:border-white/10 dark:bg-background/70 dark:text-slate-100"
               placeholder="email@contoh.com"
             />
           </div>
           <div>
-            <label class="block text-xs text-slate-400 mb-1">Pesan</label>
+            <label class="block text-xs mb-1 text-slate-600 dark:text-slate-400">Pesan</label>
             <textarea
               rows="4"
-              class="w-full rounded-xl border border-white/10 bg-background/70 px-3 py-2 text-xs text-slate-100 outline-none focus:border-accent/60 resize-none"
+              class="w-full rounded-xl border px-3 py-2 text-xs outline-none resize-none transition-colors
+                     border-black/10 bg-slate-50 text-slate-900
+                     focus:border-accent/60
+                     dark:border-white/10 dark:bg-background/70 dark:text-slate-100"
               placeholder="Tulis pesan kamu di sini..."
             ></textarea>
           </div>
@@ -47,33 +58,25 @@
             Kirim Pesan
           </button>
 
-          <p class="text-[11px] text-slate-500">
-            (Form ini belum terhubung ke backend — nanti bisa kita setup bersama.)
+          <p class="text-[11px] text-slate-500 dark:text-slate-400">
+            (Form ini belum terhubung ke backend — nanti bisa disambungkan ke email atau database.)
           </p>
         </form>
       </div>
 
       <!-- Info kontak -->
       <div
-        class="rounded-3xl border border-white/10 bg-surface/80 px-5 py-5 sm:px-6 sm:py-6 shadow-soft backdrop-blur"
+        class="rounded-3xl border px-5 py-5 sm:px-6 sm:py-6 shadow-soft backdrop-blur transition-colors duration-500
+               bg-white/80 border-black/10 text-slate-800
+               dark:bg-surface/80 dark:border-white/10 dark:text-slate-100"
       >
-        <h3 class="text-sm font-semibold text-slate-50 mb-3">
+        <h3 class="text-sm font-semibold mb-3">
           Detail Kontak
         </h3>
-        <ul class="space-y-2 text-xs text-slate-300">
-          <li>
-            <span class="font-medium text-slate-200">Email:</span>
-            <span class="ml-2">your.email@example.com</span>
-          </li>
-          <li>
-            <span class="font-medium text-slate-200">GitHub:</span>
-            <span class="ml-2">@yourgithub</span>
-          </li>
-          <li>
-            <span class="font-medium text-slate-200">LinkedIn:</span>
-            <span class="ml-2">/in/your-linkedin</span>
-          </li>
-        </ul>
+        <p class="text-xs text-slate-600 dark:text-slate-300">
+          Untuk saat ini saya belum menampilkan sosial media atau email pribadi di sini.
+          Namun, bagian ini bisa dengan mudah diperbarui ketika dibutuhkan.
+        </p>
       </div>
     </div>
   </section>
