@@ -17,7 +17,7 @@ const shortBio =
       </p>
 
       <h1
-        class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight mb-4 text-slate-900 dark:text-white"
+        class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight mb-4 leading-tight text-slate-900 dark:text-white"
       >
         Hi, I’m
         <span
@@ -59,7 +59,7 @@ const shortBio =
                  bg-slate-100 border-slate-300 text-slate-700
                  dark:bg-white/5 dark:border-white/10 dark:text-slate-200"
         >
-          HTML • CSS • JS
+          HTML • CSS • JavaScript
         </span>
         <span
           class="rounded-full border px-3 py-1
@@ -80,14 +80,15 @@ const shortBio =
 
     <div class="relative">
       <div
-        class="mx-auto h-48 w-48 sm:h-56 sm:w-56 rounded-3xl p-[2px] shadow-soft
+        class="mx-auto h-36 w-36 sm:h-48 sm:w-48 lg:h-56 lg:w-56
+               rounded-3xl p-[2px] shadow-soft
                bg-gradient-to-tr from-purple-500 via-slate-900 to-sky-500"
       >
         <div
           class="h-full w-full rounded-3xl flex items-center justify-center
                  bg-slate-900/95 dark:bg-slate-950/90"
         >
-          <span class="text-4xl sm:text-5xl font-semibold tracking-tight text-slate-100">
+          <span class="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-slate-100">
             Z
           </span>
         </div>

@@ -19,14 +19,21 @@ const applyTheme = (value) => {
 }
 
 onMounted(() => {
-  // Ikuti setting OS dulu (kalau ada)
-  const prefersDark = window.matchMedia &&
-    window.matchMedia('(prefers-color-scheme: dark)').matches
-  applyTheme(prefersDark ?? true)
+  const saved = localStorage.getItem('theme')
+  if (saved === 'dark' || saved === 'light') {
+    applyTheme(saved === 'dark')
+  } else {
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches
+    applyTheme(prefersDark)
+  }
 })
 
 const toggleTheme = () => {
-  applyTheme(!isDark.value)
+  const next = !isDark.value
+  applyTheme(next)
+  localStorage.setItem('theme', next ? 'dark' : 'light')
 }
 </script>
 
@@ -35,14 +42,14 @@ const toggleTheme = () => {
     class="min-h-screen transition-colors duration-500"
     :class="isDark ? 'bg-background text-slate-100' : 'bg-slate-50 text-slate-900'"
   >
-    <!-- Glow background (lebih lembut di light mode) -->
+    <!-- Glow background -->
     <div class="pointer-events-none fixed inset-0 opacity-60">
       <div
         class="absolute -top-40 -left-32 h-72 w-72 rounded-full blur-3xl mix-blend-soft-light"
         :class="isDark ? 'bg-purple-600' : 'bg-purple-300'"
       ></div>
       <div
-        class="absolute -bottom-40 -right-40 h-80 w-80 rounded-full blur-3xl mix-blend-soft-light"
+        class="absolute -bottom-32 -right-20 h-56 w-56 sm:h-72 sm:w-72 rounded-full blur-2xl mix-blend-soft-light opacity-40"
         :class="isDark ? 'bg-sky-500' : 'bg-sky-300'"
       ></div>
     </div>
@@ -51,7 +58,7 @@ const toggleTheme = () => {
       <Navbar :is-dark="isDark" @toggle-theme="toggleTheme" />
 
       <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-0">
-        <section id="home" class="pt-24 sm:pt-28 lg:pt-32">
+        <section id="home" class="pt-16 sm:pt-24 lg:pt-28">
           <Hero />
         </section>
 

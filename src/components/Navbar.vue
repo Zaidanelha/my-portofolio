@@ -45,7 +45,7 @@ const navItems = [
       </div>
 
       <div class="flex items-center gap-3">
-        <!-- toggle light/dark -->
+        <!-- Toggle light/dark -->
         <button
           type="button"
           @click="emit('toggle-theme')"

@@ -5,8 +5,6 @@ const projects = [
     description:
       'Landing page bertema toko sneakers dengan desain modern dan layout responsif. Fokus pada tampilan produk dan experience pengguna.',
     stack: ['Vue.js', 'Tailwind CSS'],
-    linkDemo: '#',
-    linkCode: '#',
   },
 ]
 </script>
