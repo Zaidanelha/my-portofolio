@@ -7,9 +7,10 @@
     <div class="grid gap-5 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]">
       <!-- Form -->
       <div
-        class="rounded-3xl border px-5 py-5 sm:px-6 sm:py-6 shadow-soft backdrop-blur transition-colors duration-500
+        class="rounded-3xl border px-5 py-5 sm:px-6 sm:py-6 shadow-soft backdrop-blur
                bg-white/80 border-black/10 text-slate-800
-               dark:bg-surface/80 dark:border-white/10 dark:text-slate-100"
+               dark:bg-surface/80 dark:border-white/10 dark:text-slate-100
+               transition-colors duration-500"
       >
         <p class="text-sm mb-4">
           Saya masih dalam proses belajar, tapi sangat terbuka untuk saran, masukan, atau
@@ -66,17 +67,23 @@
 
       <!-- Info kontak -->
       <div
-        class="rounded-3xl border px-5 py-5 sm:px-6 sm:py-6 shadow-soft backdrop-blur transition-colors duration-500
+        class="rounded-3xl border px-5 py-5 sm:px-6 sm:py-6 shadow-soft backdrop-blur
                bg-white/80 border-black/10 text-slate-800
-               dark:bg-surface/80 dark:border-white/10 dark:text-slate-100"
+               dark:bg-surface/80 dark:border-white/10 dark:text-slate-100
+               transition-colors duration-500"
       >
         <h3 class="text-sm font-semibold mb-3">
           Detail Kontak
         </h3>
-        <p class="text-xs text-slate-600 dark:text-slate-300">
+        <p class="text-xs text-slate-600 dark:text-slate-300 mb-3">
           Untuk saat ini saya belum menampilkan sosial media atau email pribadi di sini.
-          Namun, bagian ini bisa dengan mudah diperbarui ketika dibutuhkan.
+          Namun bagian ini bisa dengan mudah diperbarui ketika dibutuhkan.
         </p>
+
+        <ul class="space-y-1 text-xs text-slate-500 dark:text-slate-400">
+          <li>• Email & sosial media bisa ditambahkan nanti.</li>
+          <li>• Bagian ini bisa diisi info lain, seperti kota atau status belajar.</li>
+        </ul>
       </div>
     </div>
   </section>
