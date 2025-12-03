@@ -58,19 +58,19 @@ const toggleTheme = () => {
       <Navbar :is-dark="isDark" @toggle-theme="toggleTheme" />
 
       <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-0">
-        <section id="home" class="pt-16 sm:pt-24 lg:pt-28">
+        <section id="home" class="pt-16 sm:pt-24 lg:pt-28" v-reveal>
           <Hero />
         </section>
 
-        <section id="about" class="pt-24">
+        <section id="about" class="pt-24" v-reveal>
           <About />
         </section>
 
-        <section id="projects" class="pt-24">
+        <section id="projects" class="pt-24" v-reveal>
           <Projects />
         </section>
 
-        <section id="contact" class="pt-24 pb-20">
+        <section id="contact" class="pt-24 pb-20" v-reveal>
           <Contact />
         </section>
       </main>
