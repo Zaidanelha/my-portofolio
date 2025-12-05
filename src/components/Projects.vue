@@ -19,43 +19,52 @@ const projects = [
 
 <template>
   <section>
-    <h2 class="text-lg sm:text-xl font-semibold tracking-tight mb-4">
-      Projects
-    </h2>
+    <header class="mb-5">
+      <p
+        class="text-[11px] uppercase tracking-[0.25em] text-slate-500 dark:text-slate-400 mb-1"
+      >
+        Projects
+      </p>
+      <h2
+        class="text-xl sm:text-2xl font-semibold bg-gradient-to-r from-sky-500 to-purple-500 bg-clip-text text-transparent"
+      >
+        Selected Work
+      </h2>
+    </header>
 
     <div class="space-y-4">
       <article
         v-for="project in projects"
         :key="project.title"
-        class="group rounded-3xl border px-5 py-5 sm:px-6 sm:py-6 shadow-soft backdrop-blur
-               bg-white/80 border-black/10 text-slate-800
-               dark:bg-surface/80 dark:border-white/10 dark:text-slate-100
-               hover:-translate-y-0.5 hover:shadow-lg dark:hover:border-accent/60
-               transition-all duration-300"
+        class="group rounded-3xl border px-5 py-5 sm:px-7 sm:py-6
+               bg-white/80 border-white/60 shadow-soft backdrop-blur-xl
+               dark:bg-surface/80 dark:border-white/10
+               transition-all duration-300
+               hover:-translate-y-1 hover:shadow-xl hover:border-accent/70"
       >
         <div class="flex items-start justify-between gap-3 mb-2">
-          <h3 class="text-sm sm:text-base font-semibold">
+          <h3 class="text-sm sm:text-base font-semibold text-slate-900 dark:text-slate-50">
             {{ project.title }}
           </h3>
           <span
             class="text-[10px] rounded-full border px-2 py-1 whitespace-nowrap
-                   bg-slate-100 border-black/10 text-slate-700
+                   bg-slate-100/70 border-slate-200 text-slate-700
                    dark:bg-white/5 dark:border-white/10 dark:text-slate-200"
           >
             {{ project.role }}
           </span>
         </div>
 
-        <p class="text-xs sm:text-sm mb-3">
+        <p class="text-xs sm:text-sm mb-3 text-slate-700 dark:text-slate-200">
           {{ project.description }}
         </p>
 
-        <div class="flex flex-wrap gap-2 text-[11px]">
+        <div class="flex flex-wrap items-center gap-2 text-[11px]">
           <span
             v-for="tech in project.stack"
             :key="tech"
             class="rounded-full border px-3 py-1
-                   bg-slate-100 border-black/10 text-slate-700
+                   bg-slate-100/70 border-slate-200 text-slate-700
                    dark:bg-white/5 dark:border-white/10 dark:text-slate-200"
           >
             {{ tech }}

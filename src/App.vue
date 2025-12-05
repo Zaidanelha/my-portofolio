@@ -40,12 +40,12 @@ const toggleTheme = () => {
 <template>
   <div
     class="min-h-screen transition-colors duration-500"
-    :class="isDark ? 'bg-background text-slate-100' : 'bg-slate-50 text-slate-900'"
+    :class="isDark ? 'bg-background text-slate-100' : 'text-slate-900'"
   >
     <!-- Glow background -->
-    <div class="pointer-events-none fixed inset-0 opacity-60">
+    <div class="pointer-events-none fixed inset-0">
       <div
-        class="absolute -top-40 -left-32 h-72 w-72 rounded-full blur-3xl mix-blend-soft-light"
+        class="absolute -top-40 -left-32 h-72 w-72 rounded-full blur-3xl mix-blend-soft-light opacity-60"
         :class="isDark ? 'bg-purple-600' : 'bg-purple-300'"
       ></div>
       <div

@@ -1,14 +1,23 @@
 <template>
   <section>
-    <h2 class="text-lg sm:text-xl font-semibold tracking-tight mb-4">
-      Contact
-    </h2>
+    <header class="mb-5">
+      <p
+        class="text-[11px] uppercase tracking-[0.25em] text-slate-500 dark:text-slate-400 mb-1"
+      >
+        Contact
+      </p>
+      <h2
+        class="text-xl sm:text-2xl font-semibold bg-gradient-to-r from-purple-500 to-sky-500 bg-clip-text text-transparent"
+      >
+        Let’s Connect
+      </h2>
+    </header>
 
     <div class="grid gap-5 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]">
-      <!-- Form (terhubung Netlify Forms) -->
+      <!-- Form -->
       <div
-        class="rounded-3xl border px-5 py-5 sm:px-6 sm:py-6 shadow-soft backdrop-blur
-               bg-white/80 border-black/10 text-slate-800
+        class="rounded-3xl border px-5 py-5 sm:px-7 sm:py-7 shadow-soft backdrop-blur-xl
+               bg-white/80 border-white/60 text-slate-800
                dark:bg-surface/80 dark:border-white/10 dark:text-slate-100
                transition-colors duration-500"
       >
@@ -17,7 +26,6 @@
           kesempatan kolaborasi. Silakan tinggalkan pesan melalui form ini.
         </p>
 
-        <!-- Penting: name, method, data-netlify, netlify-honeypot -->
         <form
           name="contact"
           method="POST"
@@ -25,7 +33,6 @@
           netlify-honeypot="bot-field"
           class="space-y-3"
         >
-          <!-- field honeypot (disembunyikan) -->
           <input type="hidden" name="form-name" value="contact" />
           <p class="hidden">
             <label>
@@ -41,7 +48,7 @@
               name="name"
               required
               class="w-full rounded-xl border px-3 py-2 text-xs outline-none transition-colors
-                     border-black/10 bg-slate-50 text-slate-900
+                     border-slate-200 bg-slate-50 text-slate-900
                      focus:border-accent/60
                      dark:border-white/10 dark:bg-background/70 dark:text-slate-100"
               placeholder="Masukkan nama kamu"
@@ -55,7 +62,7 @@
               name="email"
               required
               class="w-full rounded-xl border px-3 py-2 text-xs outline-none transition-colors
-                     border-black/10 bg-slate-50 text-slate-900
+                     border-slate-200 bg-slate-50 text-slate-900
                      focus:border-accent/60
                      dark:border-white/10 dark:bg-background/70 dark:text-slate-100"
               placeholder="email@contoh.com"
@@ -69,7 +76,7 @@
               name="message"
               required
               class="w-full rounded-xl border px-3 py-2 text-xs outline-none resize-none transition-colors
-                     border-black/10 bg-slate-50 text-slate-900
+                     border-slate-200 bg-slate-50 text-slate-900
                      focus:border-accent/60
                      dark:border-white/10 dark:bg-background/70 dark:text-slate-100"
               placeholder="Tulis pesan kamu di sini..."
@@ -92,8 +99,8 @@
 
       <!-- Info kontak -->
       <div
-        class="rounded-3xl border px-5 py-5 sm:px-6 sm:py-6 shadow-soft backdrop-blur
-               bg-white/80 border-black/10 text-slate-800
+        class="rounded-3xl border px-5 py-5 sm:px-7 sm:py-7 shadow-soft backdrop-blur-xl
+               bg-white/80 border-white/60 text-slate-800
                dark:bg-surface/80 dark:border-white/10 dark:text-slate-100
                transition-colors duration-500"
       >
